@@ -1,18 +1,13 @@
-from scenario import apply_action, create_actions, State, Action
-from tree import TreeNode
+from setup import create_actions
+from node import Node
+from tree import State_Tree
 
+# init world
+actions = create_actions()
+init = Node(left_missionaries=3, left_cannibals=3,
+            right_missionaries=0, right_cannibals=0)
+root = State_Tree(init)
 
-def main():
-    # Create actions
-    actions = create_actions()
-
-    init = State(left_missionaries=3, left_cannibals=3,
-                 right_missionaries=0, right_cannibals=0)
-
-    root = TreeNode(init)
-    for action in actions:
-        root.add_roots(action)
-    root.print_tree()
-
-
-main()
+# Create tree
+root.try_actions(actions)
+root.print_tree()

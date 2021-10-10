@@ -30,3 +30,13 @@ ACTIONS:
  - 1m1c: transport 1 c and 1 m across the river
  - 2c: transport 2 c and 0 m across the river
  - 2m: transport 0 c and 2 m across the river
+
+MVC:
+ - Model
+    - Representation of the world
+       - World States
+       - Objects (boat, people ect)
+ - View
+    - View to user
+ - Controller
+    - Ties the two together
